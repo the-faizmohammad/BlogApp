@@ -87,7 +87,7 @@ Clone this repository to your desired folder:
 
 ```
   cd my-folder
-  git clone git@github.com:tan12082001/project-blog-app.git
+  git clone git@github.com:https://github.com/the-faizmohammad/BlogApp
 
 ```
 
