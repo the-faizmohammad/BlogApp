@@ -1,4 +1,4 @@
-require 'rails_helper'
+# require 'rails_helper'
 
 # Specs in this file have access to a helper object that includes
 # the PostsHelper. For example:
@@ -10,5 +10,5 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe PostsHelper, type: :helper do
-end
+# RSpec.describe PostsHelper, type: :helper do
+# end
