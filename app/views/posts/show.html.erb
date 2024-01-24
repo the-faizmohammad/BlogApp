@@ -1,2 +1,20 @@
-<h1>Single Post</h1>
-<h2>Single Post page from a list of posts of a specified user.</h2>
+<div class="post-container">
+    <div id="post-content">
+        <div id="name-counts">
+        <p id="each-post-name"><%= @post.title %> by <%= @post.author.name %></p>
+        <p id="each-post-c-l">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+        </div>
+        <p id="each-post-text"><%= @post.text %></p>
+    </div>
+
+    <div id="comments-container">
+        <% if @post.comments.empty? %>
+            <p class="each-commnet">No comments yet!</p>
+        <% else %>
+            <% @post.comments.each do |comment| %>
+            <p class="each-comment">@<%= comment.user.name %>: <%= comment.text %></p>
+            <% end %>
+        <% end %>
+    </div>
+
+</div>
