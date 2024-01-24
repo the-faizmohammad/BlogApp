@@ -1,0 +1,226 @@
+/* Global Styles */
+:root {
+    --common-font-size: 1.4rem;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Links Styles */
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Body Styles */
+  body {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Users Container Styles */
+  #users-container {
+    width: 100%;
+    height: 100%;
+    padding: 6% 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+  }
+  
+  /* User Data Block Styles */
+  #user-data-block {
+    display: grid;
+    grid-template-columns: 27% 68%;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 4%;
+    min-height: 220px;
+    font-size: 1.8rem;
+  }
+  
+  #user-img {
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 220px;
+  }
+  
+  /* Name and Posts Count Styles */
+  #name-posts-count {
+    width: 100%;
+    height: 90%;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+  }
+  
+  div#user-posts-count {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  /* User Posts Container Styles */
+  #user-posts-container {
+    width: 100%;
+    height: 100%;
+    padding: 6% 8%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* User Bio Styles */
+  #user-bio {
+    padding: 4% 2%;
+    border: 1px solid #ccc;
+    margin-bottom: 4%;
+    min-height: 310px;
+    font-size: var(--common-font-size);
+  }
+  
+  #bio {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* User Recent Posts Styles */
+  #user-recent-posts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+  }
+  
+  /* Each Post Info Styles */
+  #each-post-info {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    border: 1px solid #ccc; /* Light gray border */
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+  }
+  
+  /* Post Title, Text, and Counts Styles */
+  #post-title,
+  #post-text,
+  #post-counts {
+    padding: 1% 2%;
+    font-size: var(--common-font-size);
+  }
+  
+  #post-counts {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* All Posts Styles */
+  #all-posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--common-font-size);
+  }
+  
+  #all-posts a {
+    border: 1px solid #333;
+    padding: 2%;
+  }
+  
+  /* User All Posts Styles */
+  #user-all-posts {
+    width: 100%;
+    height: 100%;
+    padding: 6% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Posts Container Styles */
+  #posts-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Each Post Container Styles */
+  .each-post-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+  }
+  
+  /* Post Comments Styles */
+  #post-comments {
+    border: 1px solid #ddd;
+    padding: 1% 2%;
+  }
+  
+  /* Each Comment Styles */
+  .each-comment {
+    padding: 1% 0;
+  }
+  
+  /* Pagination Styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+    font-size: var(--common-font-size);
+  }
+  
+  /* Post Container Styles */
+  .post-container {
+    width: 100%;
+    height: 100%;
+    padding: 6% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Post Content and Comments Container Styles */
+  #post-content,
+  #comments-container {
+    border: 1px solid #ccc;
+    padding: 4% 2%;
+    font-size: var(--common-font-size);
+    margin-bottom: 4%;
+  }
+  
+  /* Post Content Styles */
+  #post-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+  }
+  
+  /* Name and Counts Styles */
+  #name-counts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+  }
+  
+  /* Each Post Text Styles */
+  #each-post-text {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Hover Effect for Post Title */
+  #post-title a:hover {
+    text-decoration: underline;
+  }
+  
