@@ -1,2 +1,14 @@
-<h1>Single User<h1>
-<h2>the user information and posts preview</h2>
+<div id="user-posts-container">
+    <%= render partial: "users/user_data", locals: { user: @user } %>
+    <div id="user-bio">
+        <h3>Bio</h3>
+        <p id="bio"><%= @user.bio %></p>
+    </div>
+    <div id="user-recent-posts">
+        <% @user.three_recent_posts.each_with_index do |post, i| %>
+            <%= render partial: "posts/post_data", locals: { post: post, i: i + 1 } %>
+        <% end %>
+    </div>
+
+    <div id="all-posts"><a href="<%= user_posts_path(@user) %>">See all posts</a></div>
+</div>
