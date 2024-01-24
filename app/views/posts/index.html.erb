@@ -1,2 +1,22 @@
-<h1>User Posts</h1>
-<h2>Here is the list of posts by a specific user.<br> Includes posts preview and its comments preview.</h2>
+<div id="user-all-posts">
+    <%= render partial: "users/user_data", locals: { user: @user } %>
+
+    <div id="posts-container">
+        <% @posts.each_with_index do |post, i| %>
+            <div class="each-post-container">
+                <%= render partial: "posts/post_data", locals: { post: post, i: i + 1 } %>
+                <div id="post-comments">
+                    <% if post.five_recent_comments.empty? %>
+                        <p class="each-comment">No Comments found!</p>
+                    <% else %>
+                        <% post.five_recent_comments.each do |comment|%>
+                            <p class="each-comment">@<%= comment.user.name %>: <%= comment.text %></p>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+
+    <%= will_paginate %>
+</div>
