@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
+  layout 'boilerplate'
   def index
-    # Add placeholder HTML here
+    @users = User.order(id: :asc)
   end
 
   def show
-    # Add placeholder HTML here
+    @user = User.find(params[:id])
   end
 end
