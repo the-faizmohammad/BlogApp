@@ -13,8 +13,8 @@ class CommentsController < ApplicationController
         flash[:success] = 'Your Comment was added successfully!'
         redirect_to user_post_path(id: @comment.post_id, user_id: @comment.user_id)
       else
-        flash.now[:error] = 'Error: Try Again, Comment could not be saved!'
-        render_new_comment
+        flash.now[:error] = 'Error: Try Agai ! Comment could not be saved!'
+        render :new, locals: { comment: @comment }
       end
     end
   
@@ -26,10 +26,6 @@ class CommentsController < ApplicationController
   
     def save_comment
       @comment.save
-    end
-  
-    def render_new_comment
-      render :new, locals: { comment: @comment }
     end
   end
   
