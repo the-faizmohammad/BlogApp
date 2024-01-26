@@ -7,6 +7,8 @@
         <p id="each-post-text"><%= @post.text %></p>
     </div>
 
+    <%= render partial: "likes/like_post", locals: {post: @post} %>
+
     <div id="comments-container">
         <% if @post.comments.empty? %>
             <p class="each-commnet">No comments yet!</p>
@@ -17,4 +19,11 @@
         <% end %>
     </div>
 
+    <% flash.each do |name, message| -%>
+        <div class="<%= name %>-flash">
+          <%= message %>
+        </div>
+    <% end -%>
+
+    <h2 class="add-comment"><%= link_to 'Comment on the Post!', new_user_post_comment_path(post_id: params[:id]) %><h2>
 </div>
