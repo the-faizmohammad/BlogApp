@@ -1,4 +1,3 @@
-/* Global Styles */
 :root {
   --common-font-size: 1.4rem;
 }
@@ -9,19 +8,16 @@
   box-sizing: border-box;
 }
 
-/* Links Styles */
 a {
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
-/* Body Styles */
 body {
   width: 100%;
   min-height: 100vh;
 }
 
-/* Users Container Styles */
 #users-container {
   width: 100%;
   height: 100%;
@@ -31,24 +27,22 @@ body {
   gap: 4%;
 }
 
-/* User Data Block Styles */
 #user-data-block {
   display: grid;
   grid-template-columns: 27% 68%;
   gap: 5%;
   align-items: center;
-  margin-bottom: 4%;
+  margin: 0 0 4% 0;
   min-height: 220px;
   font-size: 1.8rem;
 }
 
 #user-img {
-  border: 1px solid #ddd;
+  border: 1px solid red;
   width: 100%;
   height: 220px;
 }
 
-/* Name and Posts Count Styles */
 #name-posts-count {
   width: 100%;
   height: 90%;
@@ -56,7 +50,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #ccc;
+  border: 1px solid blue;
 }
 
 div#user-posts-count {
@@ -66,7 +60,6 @@ div#user-posts-count {
   justify-content: flex-end;
 }
 
-/* User Posts Container Styles */
 #user-posts-container {
   width: 100%;
   height: 100%;
@@ -75,11 +68,17 @@ div#user-posts-count {
   flex-direction: column;
 }
 
-/* User Bio Styles */
+#user-bio,
+#user-recent-posts,
+#all-posts {
+  width: 100%;
+  height: 100%;
+}
+
 #user-bio {
   padding: 4% 2%;
-  border: 1px solid #ccc;
-  margin-bottom: 4%;
+  border: 1px solid black;
+  margin: 0 0 4% 0;
   min-height: 310px;
   font-size: var(--common-font-size);
 }
@@ -89,25 +88,22 @@ div#user-posts-count {
   height: 100%;
 }
 
-/* User Recent Posts Styles */
 #user-recent-posts {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4%;
+  margin: 0 0 4% 0;
 }
 
-/* Each Post Info Styles */
 #each-post-info {
   width: 100%;
   min-height: 250px;
   display: flex;
-  border: 1px solid #ccc; /* Light gray border */
+  border: 1px solid blue;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-bottom: 2%;
+  margin: 0 0 2% 0;
 }
 
-/* Post Title, Text, and Counts Styles */
 #post-title,
 #post-text,
 #post-counts {
@@ -120,7 +116,6 @@ div#user-posts-count {
   justify-content: flex-end;
 }
 
-/* All Posts Styles */
 #all-posts {
   display: flex;
   justify-content: center;
@@ -129,11 +124,10 @@ div#user-posts-count {
 }
 
 #all-posts a {
-  border: 1px solid #333;
+  border: 1px solid black;
   padding: 2%;
 }
 
-/* User All Posts Styles */
 #user-all-posts {
   width: 100%;
   height: 100%;
@@ -143,7 +137,6 @@ div#user-posts-count {
   justify-content: space-between;
 }
 
-/* Posts Container Styles */
 #posts-container {
   width: 100%;
   height: 100%;
@@ -152,27 +145,23 @@ div#user-posts-count {
   justify-content: space-between;
 }
 
-/* Each Post Container Styles */
 .each-post-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 4%;
+  margin: 0 0 4% 0;
 }
 
-/* Post Comments Styles */
 #post-comments {
-  border: 1px solid #ddd;
+  border: 1px solid red;
   padding: 1% 2%;
 }
 
-/* Each Comment Styles */
 .each-comment {
   padding: 1% 0;
 }
 
-/* Pagination Styles */
 .pagination {
   display: flex;
   justify-content: center;
@@ -180,7 +169,6 @@ div#user-posts-count {
   font-size: var(--common-font-size);
 }
 
-/* Post Container Styles */
 .post-container {
   width: 100%;
   height: 100%;
@@ -190,36 +178,62 @@ div#user-posts-count {
   justify-content: space-between;
 }
 
-/* Post Content and Comments Container Styles */
 #post-content,
 #comments-container {
-  border: 1px solid #ccc;
+  border: 1px solid blue;
   padding: 4% 2%;
   font-size: var(--common-font-size);
-  margin-bottom: 4%;
+  margin: 0 0 4% 0;
 }
 
-/* Post Content Styles */
 #post-content {
   display: flex;
   flex-direction: column;
   min-height: 600px;
 }
 
-/* Name and Counts Styles */
 #name-counts {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4%;
+  margin: 0 0 4% 0;
 }
 
-/* Each Post Text Styles */
 #each-post-text {
   width: 100%;
   height: 100%;
 }
 
-/* Hover Effect for Post Title */
-#post-title a:hover {
+.add-post,
+.add-comment {
+  margin: 0 0 4% 0;
+  padding: 2%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#post-title a:hover,
+.add-comment:hover,
+.add-post:hover {
   text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 120px;
+  height: 40px;
+  background: #b41c5b;
+  color: #fff;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 4px;
+  margin: 0 0 4% 0;
+}
+
+.success-flash {
+  color: #008000;
+  font-size: 1.3rem;
+}
+
+.error-flash {
+  color: #f00;
+  font-size: 1.3rem;
 }
