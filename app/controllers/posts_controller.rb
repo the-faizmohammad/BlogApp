@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.author = current_user
+    @post.author_id = params[:user_id]
     if @post.save
       flash[:success] = 'Post added Successfully!'
       redirect_to user_posts_url
