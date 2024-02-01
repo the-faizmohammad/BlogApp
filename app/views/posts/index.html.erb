@@ -11,13 +11,14 @@
 
     <div id="posts-container">
         <% @posts.each_with_index do |post, i| %>
+            <% five_recent_comments = post.five_recent_comments.includes(:user) %>
             <div class="each-post-container">
                 <%= render partial: "posts/post_data", locals: { post: post, i: i + 1 } %>
                 <div id="post-comments">
-                    <% if post.five_recent_comments.empty? %>
+                    <% if five_recent_comments.empty? %>
                         <p class="each-comment">No Comments found!</p>
                     <% else %>
-                        <% post.five_recent_comments.each do |comment|%>
+                        <% five_recent_comments.each do |comment|%>
                             <p class="each-comment">@<%= comment.user.name %>: <%= comment.text %></p>
                         <% end %>
                     <% end %>
