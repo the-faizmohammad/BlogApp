@@ -1,7 +1,8 @@
-<%= link_to user_path(user), id: "user-data-block" do %>
-    <img id="user-img" src="<%= user.photo %>" alt="User photo">
-    <div id="name-posts-count">
-        <h2 id="user-name"><%= user.name %></h2>
-        <div id="user-posts-count"><p>Number of posts: <%= user.posts_counter %></p></div>
+<div class= "user-data-block">
+    <img class="user-img" src="<%= user.photo %>" alt="User photo">
+    <div class="name-posts-count">
+        <h2 class="user-name"><%= link_to user.name, user_path(user) %></h2>
+        
+        <div class="user-posts-count"><p>Number of posts: <%= user.posts_counter %></p></div>
     </div>
-<% end %>
+</div>
