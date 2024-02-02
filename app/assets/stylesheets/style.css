@@ -27,7 +27,7 @@ body {
   gap: 4%;
 }
 
-#user-data-block {
+.user-data-block {
   display: grid;
   grid-template-columns: 27% 68%;
   gap: 5%;
@@ -37,13 +37,13 @@ body {
   font-size: 1.8rem;
 }
 
-#user-img {
+.user-img {
   border: 1px solid red;
   width: 100%;
   height: 220px;
 }
 
-#name-posts-count {
+.name-posts-count {
   width: 100%;
   height: 90%;
   padding: 4%;
@@ -53,7 +53,7 @@ body {
   border: 1px solid blue;
 }
 
-div#user-posts-count {
+div.user-posts-count {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -213,7 +213,9 @@ div#user-posts-count {
 
 #post-title a:hover,
 .add-comment:hover,
-.add-post:hover {
+.add-post:hover,
+.user-name:hover,
+a.login-page-link:hover {
   text-decoration: underline;
 }
 
@@ -236,4 +238,67 @@ input[type="submit"] {
 .error-flash {
   color: #f00;
   font-size: 1.3rem;
+}
+
+h2#login-heading,
+h2#signup-heading {
+  text-align: center;
+  border: 1px solid;
+}
+
+form#new_user {
+  width: 100vw;
+  padding: 4% 24%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+.field,
+.actions {
+  width: 100%;
+}
+
+#user_email,
+#user_password,
+#user_name,
+#user_password_confirmation,
+#log-in-action,
+#sign-up-action {
+  width: 100%;
+  height: 46px;
+  font-size: 1.4rem;
+  margin: 2% 0 2% 0;
+  padding: 2%;
+}
+
+#log-in-action,
+#sign-up-action {
+  padding: 0;
+}
+
+.login-page-link {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding: 2% 0;
+}
+
+button#back-button,
+.sign-out {
+  font-size: 1.2rem;
+  background: none;
+  padding: 10px 12px;
+  border-radius: 8px;
 }
