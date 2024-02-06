@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   layout 'boilerplate'
-
   def index
-    @users = User.includes(:posts).order(id: :asc)
+    @users = User.order(id: :asc)
   end
 
   def show
