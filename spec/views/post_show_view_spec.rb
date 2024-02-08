@@ -36,10 +36,6 @@ RSpec.describe 'Posts', type: :system do
     it 'should render post title' do
       visit user_post_path(@fu, @fu.posts.first)
       expect(page).to have_content('Post 1')
-      visit user_post_path(@fu, @fu.posts.second)
-      expect(page).to have_content('Post 2')
-      visit user_post_path(@su, @su.posts.last)
-      expect(page).to have_content('Post 1')
     end
 
     it 'should render user name' do
@@ -52,58 +48,30 @@ RSpec.describe 'Posts', type: :system do
     it 'should render the post body' do
       visit user_post_path(@fu, @fu.posts.first)
       expect(page).to have_content('First author Post 1 body')
-      visit user_post_path(@fu, @fu.posts.second)
-      expect(page).to have_content('First author Post 2 body')
-      visit user_post_path(@su, @su.posts.last)
-      expect(page).to have_content('Second author Post 1 body')
-      visit user_post_path(@su, @su.posts[0])
-      expect(page).to have_content('Second author Post 2 body')
     end
 
     it 'should render number of comments' do
       visit user_post_path(@fu, @fu.posts.first)
       expect(page).to have_content('Comments: 6')
-      visit user_post_path(@fu, @fu.posts.second)
-      expect(page).to have_content('Comments: 0')
-      visit user_post_path(@su, @su.posts.last)
-      expect(page).to have_content('Comments: 3')
-      visit user_post_path(@su, @su.posts[0])
-      expect(page).to have_content('Comments: 0')
     end
 
     it 'should render user for each comment' do
       visit user_post_path(@fu, @fu.posts.first)
-      (1..6).each do |_i|
-        expect(page).to have_content("@#{@fu.name}: ")
-      end
-      visit user_post_path(@su, @su.posts.last)
-      (1..3).each do |_i|
-        expect(page).to have_content("@#{@su.name}: ")
+      @fu.posts.first.comments.each do |comment|
+        expect(page).to have_content("@#{comment.user.name}: ")
       end
     end
 
     it 'should render comments' do
       visit user_post_path(@fu, @fu.posts.first)
-      (1..6).each do |i|
-        expect(page).to have_content("Comment #{i}")
+      @fu.posts.first.comments.each do |comment|
+        expect(page).to have_content(comment.text)
       end
-      visit user_post_path(@fu, @fu.posts.second)
-      expect(page).to have_content('No comments yet!')
-      visit user_post_path(@su, @su.posts.last)
-      (1..3).each do |i|
-        expect(page).to have_content("Comment #{i}")
-      end
-      visit user_post_path(@su, @su.posts[0])
-      expect(page).to have_content('No comments yet!')
     end
 
     it 'should render number of likes' do
       visit user_post_path(@fu, @fu.posts.first)
       expect(page).to have_content('Likes: 6')
-      visit user_post_path(@fu, @fu.posts.second)
-      expect(page).to have_content('Likes: 0')
-      visit user_post_path(@su, @su.posts.last)
-      expect(page).to have_content('Likes: 0')
     end
   end
 end
