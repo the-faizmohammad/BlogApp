@@ -4,11 +4,18 @@
         <h3>Bio</h3>
         <p id="bio"><%= @user.bio %></p>
     </div>
-    <div id="user-recent-posts">
-        <% @user.three_recent_posts.each_with_index do |post, i| %>
-            <%= render partial: "posts/post_data", locals: { post: post, i: i + 1 } %>
+    <% if @user.posts_counter.zero? %>
+        <div class='user-data-block'>No posts were added by the User yet!</div>
+        <% if (current_user.id == @user.id) && (can? :create, Post) %>
+          <h2 class="add-post"><%= link_to 'Add new Post', new_user_post_path(@user) %></h2>
         <% end %>
-    </div>
+    <% else %>
+        <div id="user-recent-posts">
+            <% @user.three_recent_posts.each_with_index do |post, i| %>
+                <%= render partial: "posts/post_data", locals: { post: post, i: i + 1 } %>
+            <% end %>
+        </div>
 
-    <div id="all-posts"><a href="<%= user_posts_path(@user) %>">See all posts</a></div>
+        <div id="all-posts"><a href="<%= user_posts_path(@user) %>">See all posts</a></div>
+    <% end %>
 </div>
