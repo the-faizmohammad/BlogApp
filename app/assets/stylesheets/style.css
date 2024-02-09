@@ -51,6 +51,37 @@ nav {
   border-radius: 8px;
 }
 
+/* All posts */
+#all-posts a {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+#all-posts a:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
+/* Add post and add comment buttons */
+.add-post,
+.add-comment,
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.add-post:hover,
+.add-comment:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
 /* Success and error messages */
 .success-flash {
   color: var(--success-color);
@@ -85,3 +116,23 @@ label {
 
 input[type="text"],
 input[type="password"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button#back-button,
+.sign-out {
+  background: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button#back-button:hover,
+.sign-out:hover {
+  background-color: #f0f0f0; /* Light gray */
+}
