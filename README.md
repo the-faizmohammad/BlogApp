@@ -126,6 +126,12 @@ To run tests, run the following command:
 - GitHub: [@the-faizmohammad](https://github.com/the-faizmohammad)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/faiz-mohammad-967354142/)
 
+ 👤 **Reem Mohammed**
+
+- GitHub: [@githubhandle](https://github.com/ReemMohamedAbdelfatah)
+- Twitter: [@twitterhandle](https://twitter.com/ReemMoh67016126)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/reemmuhammad)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
