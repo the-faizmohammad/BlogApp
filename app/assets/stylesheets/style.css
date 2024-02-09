@@ -1,0 +1,24 @@
+:root {
+  --common-font-size: 1.4rem;
+  --primary-color: #007bff; /* blue */
+  --secondary-color: #6c757d; /* gray */
+  --success-color: #28a745; /* green */
+  --error-color: #dc3545; /* red */
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* Navbar */
+nav {
+  background-color: var(--primary-color); /* Updated to primary color */
+  color: #fff;
+  padding: 2% 0;
+}
+
