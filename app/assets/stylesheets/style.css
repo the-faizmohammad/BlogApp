@@ -50,3 +50,38 @@ nav {
   border: 1px solid var(--primary-color);
   border-radius: 8px;
 }
+
+/* Success and error messages */
+.success-flash {
+  color: var(--success-color);
+}
+
+.error-flash {
+  color: var(--error-color);
+}
+
+/* Login and signup headings */
+h2#login-heading,
+h2#signup-heading {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Form styling */
+form#new_user {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+.field,
+.actions {
+  margin: 1rem 0;
+}
+
+input[type="text"],
+input[type="password"],
