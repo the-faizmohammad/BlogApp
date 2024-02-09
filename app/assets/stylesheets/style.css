@@ -22,3 +22,31 @@ nav {
   padding: 2% 0;
 }
 
+/* User data block */
+.user-data-block {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.user-img {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+/* User bio */
+#user-bio {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+/* User recent posts */
+#user-recent-posts {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+/* Each post info */
+#each-post-info {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
