@@ -14,7 +14,15 @@
             <p class="each-commnet">No comments yet!</p>
         <% else %>
             <% @post.comments.each do |comment| %>
-            <p class="each-comment">@<%= comment.user.name %>: <%= comment.text %></p>
+                <div class='comment-delete'>
+                 <p class="each-comment">@<%= comment.user.name %>: <%= comment.text %></p>
+
+                 <% if can? :destroy, comment %>
+                   <%= form_with(model: comment, url: user_post_comment_path(@post.author, @post, id: comment.id), method: :delete, id: 'delete-comment-form') do |form| %>
+                    <%= form.submit "Delete Comment", id: 'delete-comment-submit' %>
+                   <% end %>
+                 <% end %>
+                </div>
             <% end %>
         <% end %>
     </div>
@@ -25,5 +33,13 @@
         </div>
     <% end -%>
 
-    <h2 class="add-comment"><%= link_to 'Comment on the Post!', new_user_post_comment_path(post_id: params[:id]) %><h2>
+    <% if can? :create, Comment %>
+      <h2 class="add-comment"><%= link_to 'Comment on the Post!', new_user_post_comment_path(@post.author, @post) %><h2>
+    <% end %>
+
+    <% if can? :destroy, @post %>
+        <%= form_with(model: @post, url: user_post_path(@post.author, @post), method: :delete, id: 'delete-post-form') do |form| %>
+            <%= form.submit "Delete Post", id: 'delete-post-submit' %>
+        <% end %>
+    <% end %>
 </div>
