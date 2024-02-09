@@ -18,6 +18,14 @@ body {
   min-height: 100vh;
 }
 
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding: 2% 0;
+  border-bottom: 1px solid #000;
+}
+
 #users-container {
   width: 100%;
   height: 100%;
@@ -75,6 +83,10 @@ div.user-posts-count {
   height: 100%;
 }
 
+p#each-post-name {
+  border-bottom: 3px dotted #e70b0b;
+}
+
 #user-bio {
   padding: 4% 2%;
   border: 1px solid black;
@@ -98,7 +110,7 @@ div.user-posts-count {
   width: 100%;
   min-height: 250px;
   display: flex;
-  border: 1px solid blue;
+  border: 1px solid rgb(220, 123, 123);
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0 0 2% 0;
@@ -124,7 +136,7 @@ div.user-posts-count {
 }
 
 #all-posts a {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   padding: 2%;
 }
 
@@ -180,7 +192,7 @@ div.user-posts-count {
 
 #post-content,
 #comments-container {
-  border: 1px solid blue;
+  border: 1px solid rgb(156, 207, 26);
   padding: 4% 2%;
   font-size: var(--common-font-size);
   margin: 0 0 4% 0;
@@ -207,7 +219,7 @@ div.user-posts-count {
 .add-comment {
   margin: 0 0 4% 0;
   padding: 2%;
-  border: 1px solid black;
+  border: 1px solid rgb(72, 110, 26);
   text-align: center;
 }
 
@@ -222,7 +234,7 @@ a.login-page-link:hover {
 input[type="submit"] {
   width: 120px;
   height: 40px;
-  background: aquamarine;
+  background: #f20606;
   color: #fff;
   font-size: 1.4rem;
   border: none;
@@ -231,7 +243,7 @@ input[type="submit"] {
 }
 
 .success-flash {
-  color: #008000;
+  color: #044a04;
   font-size: 1.3rem;
 }
 
@@ -288,17 +300,26 @@ label {
   font-size: 1.3rem;
 }
 
-nav {
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  padding: 2% 0;
-}
-
 button#back-button,
 .sign-out {
   font-size: 1.2rem;
   background: none;
   padding: 10px 12px;
   border-radius: 8px;
+}
+
+input#delete-post-submit {
+  width: 100%;
+}
+
+.comment-delete {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 3% 0;
+  border-bottom: 1px solid #f00c0c;
+}
+
+input#delete-comment-submit {
+  width: 100%;
+  padding: 6px 7px;
 }
